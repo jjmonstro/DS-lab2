@@ -1,68 +1,10 @@
 import os
-os.system ("cls")
-import math
 from subalgoritimos import *
 
 
 v = [45, -89, 32,-12, 33]
 v1 = [41, 72, 39, 4, 35]
 v2 = [0, 0, 0, 0, 0]
-
-
-# def primeiroElemento() -> int:
-#     x=v[0]
-#     # print(f"x vale {v[0]}")
-#     return x
-
-# def achaNega() -> None:
-#     for i in range (0,5,1):
-#         if v[i] < 0:
-#             print(v[i])
-
-# def somaVet() -> int:
-#     soma=0
-#     for i in range (0,5,1):
-#         soma = soma + v[i]
-#     return soma
-
-# def mediaVet() -> int:
-#     # soma = 0
-#     # for i in range (0,5,1):
-#     #     soma = soma + v[i]
-#     # media = soma / 5 
-#     return somaVet()/5
-
-# def achaImpar() -> int:
-#     impares=0
-#     for i in range (0,5,1):
-#         if v[i]%2==1:
-#             print(v[i]) 
-
-# def exiba_extremos():
-#     print(v[0],v[4])
-
-# def exibe_indice_par():
-#     for i in range(5):
-#         if i % 2 == 0:
-#             print(v[i])
-
-# def existeOuNao(valor):
-#     for i in range(5):
-#         if valor==v[i]:
-#             return True
-        
-# def ordenaVetor():
-#     for i in range(5):
-#         print(i)
-#         for j in range(5):
-#             if v[i]<v[j]:
-#                v[j]=v[i]
-#             break
-#     for y in range(5):
-#         print(v[i])
-
-
-
 
 while True:
     os.system("cls")
@@ -73,6 +15,18 @@ while True:
     3. Soma dos elementos do vetor
     4. Média dos elementos do vetos
     5. Numeros ímpares contidos no vetor
+    6. Exiba o primeiro e ultimo elemento do vetor
+    7. Exiba elementos de índice par
+    8. Verifica se o valor existe no vetor
+    9. Ordena os elemtos do vetor
+    10. Copia os elemtos de v1 em v2
+    11. Copia os elemtos de v1 invertidos em v2
+    12. Ordena o vetor de forma crescente
+    13. Ordena o vetor de forma decrescente
+    14. Ordena vetor de acordo com a escolha
+    15. Ordena valores pares em ímpares
+    16. Quantos valores estão acima da média
+    17. Maior elemento do vetor
     """)
     opcao = input("Escolha: ")
     if not opcao.isnumeric():
@@ -96,30 +50,29 @@ while True:
             print(mediaVet(v))
 
         case 5:
-            print(achaImpar())
+            print(achaImpar(v))
         case 6:
-            print(exiba_extremos())
+            print(exiba_extremos(v))
         case 7:
-            print(exibe_indice_par())
+            print(exibe_indice_par(v))
         case 8:
             print(existeOuNao(32))
         case 9:
-            print("Errado")
-            print(ordenaVetor())
+            print(ordenaVetor(v))
         case 10:
             copiaVet(v1,v2)
         case 11:
             inverte_vetor(v1,v2)
         case 12:
-            ordenaVetor2()
+            ordena_vetor_crescente(v1)
         case 13:
-            ordenaVetorDecrescente()
+            ordena_vetor_decrescente(v1)
         case 14:
-            ordenaVetorGeral()
+            ordena_vetor_geral(v1, 'c')
         case 15:
-            separaParesImpares()
+            separaParesImpares(v1)
         case 16:
-            print(acima_media())
+            print(acima_media(v1))
         case 17:
             print(maior_elemento(v1))
         case _:
