@@ -14,14 +14,14 @@ def achaNega() -> None:
             print(v[i])
 
 #EXERCÍCIO 3
-def somaVet(vet: list) -> int:
+def somaVet(vet: list) -> float:
     soma=0
     for i in range (0,5,1):
         soma = soma + vet[i]
     return soma
 
 #EXERCÍCIO 4
-def mediaVet(vet) -> int:
+def mediaVet(vet) -> float:
     # soma = 0
     # for i in range (0,5,1):
     #     soma = soma + v[i]
@@ -29,39 +29,39 @@ def mediaVet(vet) -> int:
     return somaVet(vet)/5
 
 #EXERCÍCIO 5
-def achaImpar() -> int:
-    impares=0
+def achaImpar(v) -> int:
     for i in range (0,5,1):
         if v[i]%2==1:
             print(v[i]) 
 
 #EXERCÍCIO 6
-def exiba_extremos():
-    print(v[0],v[4])
+def exiba_extremos(v):
+    print(v[0],v[-1])
 
 #EXERCÍCIO 7
-def exibe_indice_par():
+def exibe_indice_par(v):
     for i in range(5):
         if i % 2 == 0:
             print(v[i])
 
 #EXERCÍCIO 8
-def existeOuNao(valor):
+def existeOuNao(v: list, valor: int) -> bool:
     for i in range(5):
         if valor==v[i]:
             return True
+    else:
+        return False
         
 #EXERCÍCIO 9
-def ordenaVetor():
-    print("em construção...")
+def ordenaVetor(v):
     for i in range(5):
         for j in range(5):
-            if v[i]>v[j]:
-               save = v1[i]
-               v1[i] = v1[j]
+            if v[i]<v[j]:
+               save = v[i]
+               v[i] = v[j]
                v[j] = save
     for y in range(5):
-        print(v[i])
+        print(v[y])
 
 #EXERCÍCIO 10
 def copiaVet(v1: list, v2: list) -> list:
@@ -78,35 +78,66 @@ def inverte_vetor(v1: list, v2: list):
        print(f"v1={v1[i]}   v2={v2[i]}\n")
 
 #EXERCÍCIO 12
-def ordenaVetor2(vet: list) -> list:
-    print("em construção...")
+def ordena_vetor_crescente(vet: list) -> list:
+    for i in range(5):
+        for j in range(5):
+            if vet[i]<vet[j]:
+               save = vet[i]
+               vet[i] = vet[j]
+               vet[j] = save
+    for y in range(5):
+        print(vet[y])
 
 
 #EXERCÍCIO 13
-def ordenaVetorDecrescente():
-    print("em construção...")
-
-#EXERCÍCIO 14
-def ordenaVetorGeral():
-    print("em construção...")
-
-#EXERCÍCIO 15
-def separaParesImpares():
+def ordena_vetor_decrescente(vet):
     for i in range(5):
         for j in range(5):
-            if v1[i]%2==0:
-                save=v1[i]
-                v1[i]=v1[j]
-                v1[j]=save
-                
-        print(v1[i])
+            if vet[i]>vet[j]:
+               save = vet[i]
+               vet[i] = vet[j]
+               vet[j] = save
+    for y in range(5):
+        print(vet[y])
+
+#EXERCÍCIO 14
+def ordena_vetor_geral(vet: list, opcao: str):
+    if opcao == 'c':
+        for i in range(5):
+            for j in range(5):
+                if vet[i]<vet[j]:
+                    save = vet[i]
+                    vet[i] = vet[j]
+                    vet[j] = save
+        for y in range(5):
+            print(vet[y])
+    elif opcao == 'd':
+        for i in range(5):
+            for j in range(5):
+                if vet[i]>vet[j]:
+                    save = vet[i]
+                    vet[i] = vet[j]
+                    vet[j] = save
+        for y in range(5):
+            print(vet[y]) 
+
+#EXERCÍCIO 15
+def separaParesImpares(vet: list):
+    for i in range(5):
+        for j in range(5):
+            if vet[i]%2==0:
+                save=vet[i]
+                vet[i]=vet[j]
+                vet[j]=save
+    for i in range(5):            
+        print(vet[i])
         
 #EXERCÍCIO 16
-def acima_media():
+def acima_media(vet: list) -> int:
     x=0
-    media=mediaVet(v1)
+    media=mediaVet(vet)
     for i in range(5):
-        if v1[i]>media:
+        if vet[i]>media:
             x=x+1
     return x
 
