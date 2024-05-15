@@ -17,11 +17,11 @@ def conta_elementos(l: list) -> int:
     return x
 
 def retorna_indice(l: list, elemento) -> int:
-    print(len(l))
+    #print(len(l))
     tamanho=len(l)
-    print(tamanho-1)
+    #print(tamanho-1)
     for i in range(tamanho):
-        print(i)
+        #print(i)
         if elemento == l[i]:
             return i
         
