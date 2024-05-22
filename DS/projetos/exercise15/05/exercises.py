@@ -1,10 +1,9 @@
 import os
 os.system("cls")
 
+string="hh"
+lista=[2,4,5,7,9,"edd"]
 
-string="Eu sou maluco doido, avante palestra"
-lista=[2,4,5,7,-9]
-print(string)
 def transformaVogal(s:list):
     string=s.replace('a', 'A')
     string=string.replace('e', 'E')
@@ -13,12 +12,36 @@ def transformaVogal(s:list):
     string=string.replace('u', 'U')
     print(string)
 
-def inteiroOUnao(l:list) -> bool:
-    print(l)
-    l=str(l)
-    tudoJunto="".join(l)
-    print(tudoJunto)
     
+def inteiroOUnao(l:list) -> bool:
+    for i in l:
+        if type(i) == str and i.isdigit:
+            a=False
+            break
+        else:
+            a=True
+        if i < 0:
+            a=False
+            break
+    return a
+
+    
+def true_true(l) -> bool:
+    
+    # for i in range(len(l)):
+    #     if l[0] == "-" or l=="+" or numeros:
+    #         a = True
+    #     elif l[i + 1] == letras:
+    #         a = False
+    letras=["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+    a=True
+    for i in range(len(l)):
+        if l[i] in letras:
+            a = False
+            break
+    return a
 
 
-inteiroOUnao(lista)
+print(true_true("22"))
+# transformaVogal(string)
+# print(inteiroOUnao(lista))

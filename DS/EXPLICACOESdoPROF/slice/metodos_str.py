@@ -3,7 +3,7 @@ os.system("cls")
 #        01234567890123456789012345678901234567890123
 frase = "Dia 29, acontecerá algo especial no planeta!"
 
-# Método find => procura uma substring emuma string, se encontrar retorna o indice, senao -1
+# Método find => procura uma substring em uma string, se encontrar retorna o indice, senao -1
 """
 print(frase.find("algo"))
 print(frase.find(","))
