@@ -1,8 +1,8 @@
 import os
 os.system("cls")
 
-string="hh"
-lista=[2,4,5,7,9,"edd"]
+stringList=["abc"]
+lista=[2,4,5,7,9]
 
 def transformaVogal(s:list):
     string=s.replace('a', 'A')
@@ -33,7 +33,7 @@ def true_true(l) -> bool:
     #         a = True
     #     elif l[i + 1] == letras:
     #         a = False
-    letras=["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+    letras="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     a=True
     for i in range(len(l)):
         if l[i] in letras:
@@ -42,6 +42,6 @@ def true_true(l) -> bool:
     return a
 
 
-print(true_true("22"))
+# print(true_true(stringList))
 # transformaVogal(string)
-# print(inteiroOUnao(lista))
+print(inteiroOUnao(lista))
